@@ -1,4 +1,4 @@
-#wnmp-dev
+# wnmp-dev
 
 English readme below
 
@@ -12,7 +12,7 @@ wnmp-dev это веб-окружение для Windows для php-разраб
 
 Этот репозиторий - форк оригинального репозитория Александра Макарова https://github.com/samdark/wnmp-dev с предустановленными php 5.6 , php 7.4 и mysql 5.7 
 
-##Установка
+## Установка
 
 1. Загрузите релиз и распакуйте в любую удобную папку.
 2. ВАЖНО! Проинициализируйте mysql, создав дефолтную структуру баз данных. Выполните `mysql57\bin\mysqld.exe --defaults-file=mysql57\my.ini --initialize-insecure` . Будет создан mysql-пользователь root без пароля.
@@ -22,7 +22,7 @@ wnmp-dev это веб-окружение для Windows для php-разраб
 Можете вместо ручного добавления воспользоваться скриптом: `wnmp_create_domain foobar.local`. Скрипт требует наличия консольной утилиты `sed` в системе (она идёт в комплекте с `git`). Отредактируйте скрипт, заменив дефолтный путь размещения сайтов (c:\Sites) на ваш. 
 6. Запустите nginx, mysql и обработчики php: `wnmp_all_start` или `wnmp_all_restart`
      
-##Работа
+## Работа
 
 Не бойтись менять все конфиги и скрипты запуска. Делайте удобную для себя среду.
 
@@ -88,11 +88,11 @@ Git for windows - https://gitforwindows.org/ . В комплекте идёт м
 
 -------------------------------------------
 
-#English readme for wnmp-dev
+# English readme for wnmp-dev
 
 wnmp-dev is development environment for Windows that consists of nginx, MySQL and PHP.
 
-##Installation
+## Installation
 
 1. Download last release and unzip to some folder
 2. Add folder to PATH
@@ -109,7 +109,7 @@ wnmp-dev is development environment for Windows that consists of nginx, MySQL an
 4. Create config files. Initialize database `mysql56\bin\mysqld.exe --defaults-file=mysql56\my.ini --initialize-insecure`
 5. Add new software to .bat files 
 
-##Credits
+## Credits
 
 - PHP CGI spawner (`php-cgi-spawner.exe`): https://github.com/deemru/php-cgi-spawner
 - Original wnmp-dev: https://github.com/samdark/wnmp-dev
