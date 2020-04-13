@@ -42,7 +42,7 @@ wnmp-dev это веб-окружение для Windows для php-разраб
 
 Логи nginx - запросы к вебсерверу: `nginx/logs/domain.local-access.log`, ошибки соединения с php: `nginx/logs/domain.local-error.log` 
 
-Логи mysql - основной лог работы: `mysql57/data/mysql57.err`, лог медленных запросов: `mysql57/data/mysql57-slow.err`
+Логи mysql - лог работы mysqld: `mysql57/data/mysql57.err`, лог медленных запросов: `mysql57/data/mysql57-slow.err`, лог всех запросов: `mysql57/data/mysql57.log` (по умолчанию выключен)
 
 ## Добавление новой версии php
 
