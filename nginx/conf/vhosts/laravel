@@ -1,0 +1,42 @@
+server {
+    listen 80;
+    server_name DOMAIN;
+    root PATH;
+
+    index index.html index.htm index.php;
+
+    charset utf-8;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    error_page 404 /index.php;
+
+    access_log logs/DOMAIN-access.log;
+    error_log  logs/DOMAIN-error.log error;
+
+
+    location ~ \.php$ {
+        fastcgi_pass 127.0.0.1:9074; # change port for proper php version
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        try_files $uri /index.php =404;
+        fastcgi_index index.php;
+        include fastcgi.conf;
+    }
+
+    # Static files
+    location ~* .(css|js|jpg|jpeg|gif|png|bmp)$ {
+        expires max;
+        log_not_found off;
+        access_log off;
+    }
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location = /robots.txt  { access_log off; log_not_found off; }
+
+
+    # Disable to show files and folders like .htpasswd .git etc
+    location ~ /\.(ht|git|svn) {
+        deny all;
+    }
+}
